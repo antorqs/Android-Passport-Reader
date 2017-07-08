@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="passportreader.retrovanilla.com.androidpassportreader.CheckPassportActivity"
+    android:orientation="vertical">
+
+    <TextView android:text="@string/provide_passport"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="10dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+        <Button
+            android:id="@+id/challenge_btn"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:text="@string/challenge"
+            android:onClick="challenge" />
+
+        <Button
+            android:id="@+id/auth_btn"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:text="@string/authenticate"
+            android:onClick="authenticate"
+            android:layout_below="@id/challenge_btn"/>
+
+        <Button
+            android:id="@+id/replay_btn"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:text="@string/replay"
+            android:onClick="replay"
+            android:layout_toRightOf="@id/challenge_btn"
+            />
+
+        <Button
+            android:id="@+id/wrong_btn"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:text="@string/wrong"
+            android:onClick="sendWrong"
+            android:layout_toRightOf="@id/auth_btn"
+            android:layout_below="@id/replay_btn"/>
+
+        <Button
+            android:id="@+id/replay_timing_btn"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:text="@string/replay_time"
+            android:onClick="replayTiming"
+            android:layout_toRightOf="@id/replay_btn"
+            />
+
+        <Button
+            android:id="@+id/wrong_timing_btn"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:text="@string/wrong_time"
+            android:onClick="wrongDataTiming"
+            android:layout_toRightOf="@id/wrong_btn"
+            android:layout_below="@id/replay_timing_btn"
+            />
+
+        <TextView
+            android:id="@+id/total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_time"
+            android:layout_below="@id/auth_btn"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="20dp" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/tag_output"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/tag_output"/>
+    </ScrollView>
+
+</LinearLayout>

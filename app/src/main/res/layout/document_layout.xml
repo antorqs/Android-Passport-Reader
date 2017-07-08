@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGray">
+
+    <TextView
+        android:id="@+id/item_document_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="1dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="@string/document_number"
+        android:textSize="22sp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/item_birth_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="3dp"
+        android:paddingTop="1dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="@string/birth_date"
+        android:textSize="18sp"
+        android:layout_marginLeft="25dp" />
+
+    <TextView
+        android:id="@+id/item_expiration_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="3dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="@string/expiration_date"
+        android:textSize="18sp"
+        android:layout_marginLeft="25dp"/>
+
+</LinearLayout>
